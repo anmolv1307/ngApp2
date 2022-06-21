@@ -1,0 +1,43 @@
+.dialogBackdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.mat-dialog-container {
+    .mat-dialog-close {
+        position: absolute !important;
+        right: 0;
+        top: 0;
+        color: $color-white;
+    }
+    .mat-dialog-title {
+        text-align: center;
+    }
+    .mat-dialog-actions {
+        justify-content: center;
+    }
+}
+.mat-tab-group {
+    .mat-tab-header {
+        .mat-tab-labels {
+            .mat-tab-label {
+                flex: 1;
+            }
+        }
+    }
+    .mat-tab-body-wrapper {
+        padding-top: 15px;
+    }
+}
+mat-form-field {
+    &.mat-form-field {
+        width: 100%;
+    }
+}
+mat-radio-group {
+    display: block;
+    width: 100%;
+    text-align: left;
+    mat-radio-button {
+        display: block;
+        margin: 0 10px 10px 0;
+    }
+}

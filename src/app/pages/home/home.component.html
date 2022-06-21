@@ -1,0 +1,60 @@
+<div class="banner">
+    <ngx-slick-carousel [config]="slideConfig" class="ngxSlider">
+        <div ngxSlickItem *ngFor="let slide of slides" class="ngxSlider__item">
+            <img src="{{ slide.img }}" alt="" width="100%">
+            <div class="ngxSlider__captionFixed">
+                <h4>Welcome to Aboard with TechFriend Solutions</h4>
+            </div>
+        </div>
+    </ngx-slick-carousel>
+</div>
+<div class="homeInfo secPadd">
+    <div class="container">
+        <div class="row alignCenter">
+            <div class="col col--2 homeInfo__left">
+                <img src="assets/images/dummy-3.jpg" alt="">
+            </div>
+            <div class="col col--2 homeInfo__right">
+                <article>
+                    <h1>Neque porro quisquam est qui dolorem ipsum quia dolor
+                        sit amet</h1>
+                    <h2>Where can I get some</h2>
+                    <p>There are many variations of passages of Lorem Ipsum
+                        available, but the majority have suffered alteration in
+                        some form, by injected humour, or randomised words which
+                        don't look even slightly believable. If you are going to
+                        use a passage of Lorem Ipsum, you need to be sure there
+                        isn't anything embarrassing hidden in the middle of
+                        text.</p>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="homeProducts secPadd">
+    <div class="container">
+        <div class="row">
+            <div class="col col--3" *ngFor="let i of [].constructor(3);">
+                <mat-card>
+                    <img mat-card-image
+                        src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                        alt="Photo of a Shiba Inu">
+                    <mat-card-content>
+                        <h3>Neque porro quisquam est qui dolorem ipsum</h3>
+                        <p>
+                            The Shiba Inu is the smallest of the six original
+                            and distinct spitz breeds of dog from Japan.
+                            A small, agile dog that copes very well with
+                            mountainous terrain, the Shiba Inu was originally
+                            bred for hunting.
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-flat-button color="accent">LIKE</button>
+                        <button mat-flat-button color="primary">Add to cart</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

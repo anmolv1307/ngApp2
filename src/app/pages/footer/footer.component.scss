@@ -1,0 +1,17 @@
+@import '/src/assets/scss/variables.scss';
+
+.footer {
+    background-color: $color-darkgray;
+    mat-grid-tile {
+        background-color: $color-gray;
+    }
+    &__copyright {
+        background-color: $color-gray;
+        text-align: center;
+        color: $color-white;
+        padding: 10px;
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

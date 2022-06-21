@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span><strong>My App</strong></span>
+        <mat-card>
+            <mat-list role="list">
+                <mat-list-item role="listitem">
+                    Home
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    About
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    Shop
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    Contact
+                </mat-list-item>
+                <a mat-flat-button color="accent" (click)="openDialog()" [ngStyle]="{'min-width':
+                    'auto'}">
+                    Login/Register
+                </a>
+            </mat-list>
+        </mat-card>
+    </mat-toolbar-row>
+</mat-toolbar>

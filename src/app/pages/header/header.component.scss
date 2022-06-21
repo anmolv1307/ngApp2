@@ -1,0 +1,19 @@
+mat-toolbar-row {
+    justify-content: space-between;
+    mat-card {
+        box-shadow: none;
+        background-color: transparent;
+        padding: 0;
+        mat-list {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            mat-list-item {
+                padding: 0;
+                height: auto;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+}

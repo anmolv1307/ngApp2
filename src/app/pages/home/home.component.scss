@@ -1,0 +1,36 @@
+@import '/src/assets/scss/variables.scss';
+
+.banner {
+    .ngxSlider {
+        &__item {
+            max-height: 50vh;
+            position: relative;
+        }
+        &__captionFixed {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            max-width: 480px;
+            text-align: center;
+            h4 {
+                margin-bottom: 0;
+                font-size: 30px;
+                color: $color-white;
+            }
+        }
+    }
+}
+.homeProducts {
+    background-color: $color-lightblue;
+    .mat-card-image {
+        margin: 0 0 15px;
+    }
+    mat-card-actions {
+        margin: auto;
+        button {
+            margin: 0 10px 10px 0;
+        }
+    }
+}
