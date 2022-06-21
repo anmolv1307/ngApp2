@@ -1,3 +1,5 @@
+@import '/src/assets/scss/variables.scss';
+
 mat-toolbar-row {
     justify-content: space-between;
     mat-card {
@@ -11,8 +13,11 @@ mat-toolbar-row {
             mat-list-item {
                 padding: 0;
                 height: auto;
-                color: #fff;
+                color: $color-white;
                 cursor: pointer;
+                &.active {
+                    color: $color-pink;
+                }
             }
         }
     }

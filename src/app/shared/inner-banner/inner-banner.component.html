@@ -1,0 +1,10 @@
+<div class="innerBanner">
+    <ngx-slick-carousel [config]="slideConfig" class="ngxSlider">
+        <div ngxSlickItem *ngFor="let slide of slides" class="ngxSlider__item">
+            <img src="{{ slide.img }}" alt="" width="100%">
+            <div class="ngxSlider__captionFixed">
+                <h4>{{title}}</h4>
+            </div>
+        </div>
+    </ngx-slick-carousel>
+</div>

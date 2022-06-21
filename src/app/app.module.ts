@@ -25,6 +25,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { AuthWrapperComponent } from './modules/auth/auth-wrapper/auth-wrapper.component';
 import { LoginComponent } from './modules/auth/login/login.component';
 import { RegisterComponent } from './modules/auth/register/register.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { SharedModule } from './shared/shared.module';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -35,7 +39,10 @@ import { RegisterComponent } from './modules/auth/register/register.component';
     HomeComponent,
     AuthWrapperComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AboutComponent,
+    ContactComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +60,8 @@ import { RegisterComponent } from './modules/auth/register/register.component';
     MatIconModule,
     MatDialogModule,
     MatRadioModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
