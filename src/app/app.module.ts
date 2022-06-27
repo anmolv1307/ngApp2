@@ -29,6 +29,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SharedModule } from './shared/shared.module';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 
 @NgModule({
@@ -42,7 +44,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     RegisterComponent,
     AboutComponent,
     ContactComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +64,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     MatDialogModule,
     MatRadioModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
