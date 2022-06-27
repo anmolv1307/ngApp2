@@ -3,22 +3,39 @@
         <span routerLink="" role="cursor"><strong>My App</strong></span>
         <mat-card>
             <mat-list role="list">
-                <mat-list-item role="listitem" routerLink="/home" routerLinkActive="active">
+                <mat-list-item role="listitem" routerLink="/home"
+                    routerLinkActive="active">
                     Home
                 </mat-list-item>
-                <mat-list-item role="listitem" routerLink="/about" routerLinkActive="active">
+                <mat-list-item role="listitem" routerLink="/about"
+                    routerLinkActive="active">
                     About
                 </mat-list-item>
                 <mat-list-item role="listitem">
                     Products
                 </mat-list-item>
-                <mat-list-item role="listitem" routerLink="/contact" routerLinkActive="active">
+                <mat-list-item role="listitem" routerLink="/contact"
+                    routerLinkActive="active">
                     Contact
                 </mat-list-item>
-                <a mat-flat-button color="accent" (click)="openDialog()" [ngStyle]="{'min-width':
-                    'auto'}">
+                <a mat-flat-button color="accent" (click)="openDialog()"
+                    [ngStyle]="{'min-width':
+                    'auto'}" *ngIf="!isAuthenticated">
                     Login/Register
                 </a>
+                <a mat-icon-button [matMenuTriggerFor]="menu" *ngIf="isAuthenticated">
+                    <mat-icon>more_vert</mat-icon>
+                </a>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                        <mat-icon>notifications_off</mat-icon>
+                        <span>Profile</span>
+                    </button>
+                    <button mat-menu-item (click)="logout()">
+                        <mat-icon>notifications_off</mat-icon>
+                        <span>Logout</span>
+                    </button>
+                </mat-menu>
             </mat-list>
         </mat-card>
     </mat-toolbar-row>

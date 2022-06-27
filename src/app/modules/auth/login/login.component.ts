@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth/auth.service';
+import { AuthWrapperComponent } from '../auth-wrapper/auth-wrapper.component';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +20,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private auth: AuthService
+    private auth: AuthService,
+    public dialogRef: MatDialogRef<AuthWrapperComponent>
   ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]],
@@ -31,19 +34,18 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.loginForm);
-
     if (this.loginForm.valid) {
-      this.auth.saveLoginData(this.loginForm.value).subscribe(
-        (result) => {
-          console.log(result);
-          alert('Yes');
-          // this.router.navigate(['/admin']);
+      let router = this.router.navigate(['profile']);
+      let closeDialog = this.dialogRef.close();
+      this.auth.saveLoginData(this.loginForm.value).subscribe({
+        next(response) {
+          sessionStorage.setItem('token', response.token); 
+          router; 
+          closeDialog;
+          window.location.reload();
         },
-        (err: Error) => {
-          alert(err.message);
-        }
-      );
+        error(err: Error) { alert(err.message); }
+    });
     }
   }
 
@@ -56,9 +58,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.auth.isLoggedIn()) {
-      this.router.navigate(['admin']);
-    }
+    
   }
 
 }

@@ -4,6 +4,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,9 @@ const routes: Routes = [
   },
   {
     path: 'contact', component: ContactComponent, title: 'Contact Title'
+  },
+  {
+    path: 'profile', component: ProfileComponent, title: 'Profile Title'
   },
   {
     path: '', redirectTo: "/home", pathMatch: 'full'
