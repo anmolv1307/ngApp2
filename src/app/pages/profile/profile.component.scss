@@ -1,0 +1,15 @@
+@import '/src/assets/scss/variables.scss';
+
+.profile {
+    &__info {
+        &-img {
+            img {
+                @include round-img(120px);
+            }
+        }
+        &-content {
+            width: calc(100% - 120px);
+            padding-left: 20px;
+        }
+    }
+}

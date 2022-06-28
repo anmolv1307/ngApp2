@@ -41,3 +41,14 @@ mat-radio-group {
         margin: 0 10px 10px 0;
     }
 }
+.mat-menu {
+    button {
+        &.active, &:hover {
+            background-color: $color-gray !important;
+            color: $color-white;
+            mat-icon {
+                color: $color-white;
+            }
+        }
+    }
+}

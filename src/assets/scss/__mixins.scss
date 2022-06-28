@@ -8,3 +8,9 @@
         @content;
     }
 }
+@mixin round-img($size) {
+    width: $size;
+    height: $size;
+    object-fit: cover;
+    border-radius: 50%;
+}

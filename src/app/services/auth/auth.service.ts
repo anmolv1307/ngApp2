@@ -25,8 +25,8 @@ export class AuthService {
   }
 
   logout() {
-    sessionStorage.removeItem('token');
     this.router.navigate(['home']);
+    sessionStorage.removeItem('token');
     window.location.reload();
   }
 

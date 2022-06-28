@@ -12,6 +12,6 @@
             <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
             <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </mat-form-field>
-        <button mat-raised-button color="primary">Submit</button>
+        <button mat-raised-button color="primary"> {{ loader ? 'Loading...' : 'Submit' }} </button>
     </form>
 </div>
