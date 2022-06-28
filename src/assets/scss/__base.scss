@@ -49,3 +49,14 @@ img {
 [role="cursor"] {
     cursor: pointer;
 }
+table {
+    &.c_table {
+        border-collapse: collapse;
+        width: 100%;
+        th, td {
+            padding: 10px 15px;
+            text-align: center;
+            border: 1px solid $color-lightblue;
+        }
+    }
+}

@@ -17,6 +17,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatRadioModule} from '@angular/material/radio';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatTableModule} from '@angular/material/table';
+import { JwtHelperService, JWT_OPTIONS  } from '@auth0/angular-jwt';
 
 
 import { AppComponent } from './app.component';
@@ -68,9 +70,10 @@ import { ProfileComponent } from './pages/profile/profile.component';
     ReactiveFormsModule,
     SharedModule,
     HttpClientModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTableModule
   ],
-  providers: [],
+  providers: [{ provide: JWT_OPTIONS, useValue: JWT_OPTIONS }, JwtHelperService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

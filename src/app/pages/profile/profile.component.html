@@ -1,13 +1,45 @@
 <div class="profile">
-    <app-inner-banner [title]="'Profile'"></app-inner-banner>
+    <app-inner-banner [title]="this.currentUser.name + ' Profile'"></app-inner-banner>
     <div class="container">
         <div class="profile__info d-flex secPadd">
             <div class="profile__info-img">
                 <img src="assets/images/user.png" alt="User">
             </div>
             <div class="profile__info-content">
-                <h2>User Name</h2>
-                <h3>User Email</h3>
+                <table class="c_table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Email
+                            </th>
+                            <th>
+                                Phone Number
+                            </th>
+                            <th>
+                                Gender
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                {{this.currentUser.name}}
+                            </td>
+                            <td>
+                                {{this.currentUser.email}}
+                            </td>
+                            <td>
+                                {{this.currentUser.phoneNumber}}
+                            </td>
+                            <td>
+                                {{this.currentUser.gender}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
